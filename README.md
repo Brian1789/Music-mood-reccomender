@@ -44,13 +44,29 @@ A full-stack music mood recommender built with PHP, MySQL, HTML, CSS, and vanill
 
 This project works well on a free PHP/MySQL host such as InfinityFree.
 
-1. Create a free hosting account and a new website.
-2. Open the host control panel and create a MySQL database.
-3. Import `database/schema.sql` into the database with phpMyAdmin.
-4. Upload the project files into the site root, usually `htdocs` or `public_html`.
-5. Open `admin/db/connection.php` and replace the database settings if your host does not use the default values.
-6. Visit your domain in the phone browser and open `index.php`.
-7. Add one admin account in the `users` table with `is_admin = 1` so you can log in to `admin/admin.php`.
+1. In InfinityFree, create/select your hosting account and domain and confirm your web root is `htdocs`.
+2. In the InfinityFree control panel, create a MySQL database and note:
+   - database host
+   - database name
+   - database user
+   - database password
+3. Open phpMyAdmin from InfinityFree and import `/home/runner/work/Music-mood-reccomender/Music-mood-reccomender/database/schema.sql`.
+4. Upload all project files from `/home/runner/work/Music-mood-reccomender/Music-mood-reccomender` into `htdocs` (or your host root if different).
+5. Configure production database credentials:
+   - `DB_HOST`
+   - `DB_PORT`
+   - `DB_NAME`
+   - `DB_USER`
+   - `DB_PASS`
+   If environment variables are not available on your host, update fallback values in [admin/db/connection.php](admin/db/connection.php).
+6. Open your public domain and test:
+   - register
+   - login
+   - mood recommendation fetch
+7. Create one admin account:
+   - register a normal user first
+   - run `/home/runner/work/Music-mood-reccomender/Music-mood-reccomender/database/make_admin.sql` in phpMyAdmin to promote that user (`is_admin = 1`)
+   - log in at `admin/admin.php`
 
 If your host gives you a database host name, user name, password, and database name, put those values in [admin/db/connection.php](admin/db/connection.php).
 
