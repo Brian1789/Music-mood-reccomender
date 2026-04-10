@@ -50,8 +50,8 @@ This project works well on a free PHP/MySQL host such as InfinityFree.
    - database name
    - database user
    - database password
-3. Open phpMyAdmin from InfinityFree and import `/home/runner/work/Music-mood-reccomender/Music-mood-reccomender/database/schema.sql`.
-4. Upload all project files from `/home/runner/work/Music-mood-reccomender/Music-mood-reccomender` into `htdocs` (or your host root if different).
+3. Open phpMyAdmin from InfinityFree and import `database/schema.sql`.
+4. Upload all project files from your local copy of this repository into `htdocs` (or your host root if different).
 5. Configure production database credentials:
    - `DB_HOST`
    - `DB_PORT`
@@ -65,7 +65,7 @@ This project works well on a free PHP/MySQL host such as InfinityFree.
    - mood recommendation fetch
 7. Create one admin account:
    - register a normal user first
-   - run `/home/runner/work/Music-mood-reccomender/Music-mood-reccomender/database/make_admin.sql` in phpMyAdmin to promote that user (`is_admin = 1`)
+   - run `database/make_admin.sql` in phpMyAdmin to promote that user (`is_admin = 1`)
    - log in at `admin/admin.php`
 
 If your host gives you a database host name, user name, password, and database name, put those values in [admin/db/connection.php](admin/db/connection.php).
