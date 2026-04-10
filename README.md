@@ -44,7 +44,7 @@ A full-stack music mood recommender built with PHP, MySQL, HTML, CSS, and vanill
 
 This project works well on a free PHP/MySQL host such as InfinityFree.
 
-1. In InfinityFree, create/select your hosting account and domain and confirm your web root is `htdocs`.
+1. In InfinityFree, create/select your hosting account and domain, then confirm the exact web root for your account (commonly `htdocs`).
 2. In the InfinityFree control panel, create a MySQL database and note:
    - database host
    - database name
@@ -67,8 +67,6 @@ This project works well on a free PHP/MySQL host such as InfinityFree.
    - register a normal user first
    - run `database/make_admin.sql` in phpMyAdmin to promote that user (`is_admin = 1`)
    - log in at `admin/admin.php`
-
-If your host gives you a database host name, user name, password, and database name, put those values in [admin/db/connection.php](admin/db/connection.php).
 
 On mobile, the site should load from the public URL provided by the host, not from a local file.
 
